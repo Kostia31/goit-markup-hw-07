@@ -1,0 +1,149 @@
+/* Desktop CSS */
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1158px;
+  }
+
+  .list-auth {
+    display: flex;
+    gap: 40px;
+  }
+  .link-auth {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    color: var(--text-color);
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    transition: color 250ms var(--cubik);
+  }
+
+  /* Hero */
+
+  .hero {
+    padding-bottom: 188px;
+    padding-top: 188px;
+  }
+
+  .pic {
+    height: 600px;
+    width: 1440px;
+    background-color: var(--logo-color);
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office\ .jpg);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .pic {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office@2x.jpg);
+    }
+  }
+
+  /* Advanteges */
+
+  .section.advantages {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+
+    background-color: var(--btn-secondary-clr);
+
+    margin-bottom: 8px;
+  }
+
+  .list-advent {
+    flex-wrap: nowrap;
+  }
+
+  .second-title {
+    margin: 0px 0px 8px 0px;
+    padding: 0px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    color: var(--logo-color);
+  }
+  .item-advent:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  /* Opportunities */
+
+  .opportunities {
+    padding-bottom: 120px;
+  }
+
+  .title {
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 72px;
+
+  color: var(--logo-color);
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.list-opportunities{
+    display: flex;
+}
+.item-opportunities:not(:last-child){
+    margin-right: 24px;
+}
+
+/* Team */
+
+.customers {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.list-team{
+  margin: 0;
+}
+
+/* Footer */
+
+.container.footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.footer{
+  justify-content: space-between;
+}
+/* Gallery */
+
+.gallery-cards {
+    width: auto;
+    grid-row-gap: 48px;
+}
+}

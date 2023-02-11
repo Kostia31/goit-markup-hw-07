@@ -13,7 +13,10 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
+    <link rel="stylesheet" href="./css/desktop.css" />
   </head>
   <body>
     <header class="head">
@@ -22,7 +25,7 @@
           <a class="logo" href="index.html"
             ><span class="accent">Web</span>Studio</a
           >
-          <ul class="list nav">
+          <ul class="list list-nav">
             <li class="item-nav">
               <a class="link link-nav current" href="index.html">Studio</a>
             </li>
@@ -34,7 +37,12 @@
             </li>
           </ul>
         </nav>
-        <ul class="list auth">
+        <button type="button" class="burger-btn" data-menu-open>
+          <svg class="icon-burger" width="32px" height="22px">
+            <use href="./images/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
+        <ul class="list list-auth">
           <li class="item-auth">
             <a class="link link-auth" href="mailto:info@devstudio.com"
               >info@devstudio.com</a
@@ -47,12 +55,78 @@
           </li>
         </ul>
       </div>
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" data-menu>
+        <div class="container menu-container">
+          <button type="button" class="mobile-menu-close" data-menu-close>
+            <svg class="icon-close">
+              <use href="./images/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="list mobile-nav">
+            <li class="mobile-item-nav">
+              <a class="link mobile-link-nav" href="index.html">Studio</a>
+            </li>
+            <li class="mobile-item-nav">
+              <a class="link mobile-link-nav" href="./portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="mobile-item-nav">
+              <a class="link mobile-link-nav" href="/">Contacts</a>
+            </li>
+          </ul>
+          <ul class="list mobile-auth">
+            <li class="mobile-auth-item">
+              <a class="link mobile-link-auth tel" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mobile-auth-item">
+              <a class="link mobile-link-auth" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-social-list list">
+            <li>
+              <a class="mobile-social" href="./index.html">
+                <svg width="16" height="16">
+                  <use href="./images/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="mobile-social" href="./index.html">
+                <svg width="16" height="16">
+                  <use href="./images/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="mobile-social" href="./index.html">
+                <svg width="16" height="16">
+                  <use href="./images/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="mobile-social" href="./index.html">
+                <svg width="16" height="16">
+                  <use href="./images/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
     <main>
       <!-- hero -->
+
       <div class="pic">
         <section class="hero">
-          <h1 class="hero title">
+          <h1 class="hero-title">
             Effective Solutions <br />
             for Your Business
           </h1>
@@ -61,76 +135,13 @@
           </button>
         </section>
       </div>
-      <!-- Backdrop -->
-      <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-          <button type="button" class="modal-btn" data-modal-close>
-            <svg class="icon-btn">
-              <use href="./images/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-          <!-- Modal Form -->
-          <h2 class="form-title">
-            Leave your contacts and we will call you back
-          </h2>
-          <form name="form-order" class="form-order">
-            <label class="order-label" for="name">Name</label>
-            <div class="form-box">
-              <input type="text" name="name" id="name" class="order-input" />
-              <svg class="order-icon">
-                <use href="./images/sprite.svg#icon-user"></use>
-              </svg>
-            </div>
-            <label class="order-label" for="tel">Phone</label>
-            <div class="form-box">
-              <input type="tel" name="tel" id="tel" class="order-input" />
-              <svg class="order-icon">
-                <use href="./images/sprite.svg#icon-phone"></use>
-              </svg>
-            </div>
-            <label class="order-label" for="email">Email</label>
-            <div class="form-box">
-              <input type="email" name="email" id="email" class="order-input" />
-              <svg class="order-icon">
-                <use href="./images/sprite.svg#icon-email"></use>
-              </svg>
-            </div>
 
-            <label class="order-comment" for="comment">Comment</label>
-            <textarea
-              class="comment"
-              name="comment"
-              id="comment"
-              placeholder="Text input"
-              cols=""
-              rows=""></textarea>
+      <!-- Advantages -->
 
-            <div class="chekbox">
-              <input
-                class="checkbox-hidden"
-                type="checkbox"
-                name="checkbox"
-                id="checkbox" />
-              <label class="order-label" for="checkbox"
-                ><svg class="checkbox-icon">
-                  <use href="./images/sprite.svg#icon-check"></use>
-                </svg>
-                I accept the terms and conditions of the
-                <a class="link-order" href="./index.html"
-                  >Privacy Policy</a
-                ></label
-              >
-            </div>
-            <button class="btn-order" type="submit">Send</button>
-          </form>
-        </div>
-      </div>
-
-      <!-- advantages -->
       <section class="section advantages">
         <div class="container">
           <h2 class="secret-name">Our advantages</h2>
-          <ul class="list main">
+          <ul class="list list-advent">
             <li class="item-advent">
               <div class="thumb">
                 <svg class="icon" width="59.72px" height="64px">
@@ -143,7 +154,7 @@
                 the perfect and creative solution.
               </p>
             </li>
-            <li class="item">
+            <li class="item-advent">
               <div class="thumb">
                 <svg class="icon" width="61.22px" height="64px">
                   <use href="./images/sprite.svg#icon-clock"></use>
@@ -155,7 +166,7 @@
                 within the shortest possible time.
               </p>
             </li>
-            <li class="item">
+            <li class="item-advent">
               <div class="thumb">
                 <svg class="icon" width="64px" height="64px">
                   <use href="./images/sprite.svg#icon-diagram"></use>
@@ -167,7 +178,7 @@
                 growth opportunities and minimize risk.
               </p>
             </li>
-            <li class="item">
+            <li class="item-advent">
               <div class="thumb">
                 <svg class="icon" width="64px" height="64px">
                   <use href="./images/sprite.svg#icon-astronaut"></use>
@@ -182,27 +193,32 @@
           </ul>
         </div>
       </section>
-      <!-- opportunities -->
-      <section class="section">
+
+      <!-- Opportunities -->
+
+      <section class="section opportunities">
         <div class="container">
           <h2 class="title">What are we doing</h2>
-          <ul class="list">
-            <li class="item">
+          <ul class="list list-opportunities">
+            <li class="item-opportunities">
               <img
+                srcset="./images/display.jpg 1x, ./images/display@2x.jpg 2x"
                 class="img"
                 src="./images/display.jpg"
                 alt="computer"
                 width="360" />
             </li>
-            <li class="item">
+            <li class="item-opportunities">
               <img
+                srcset="./images/phone.jpg 1x, ./images/phone@2x.jpg 2x"
                 class="img"
                 src="./images/phone.jpg"
                 alt="display phone"
                 width="360" />
             </li>
-            <li class="item">
+            <li class="item-opportunities">
               <img
+                srcset="./images/laptop.jpg 1x, ./images/laptop@2x.jpg 2x"
                 class="img"
                 src="./images/laptop.jpg"
                 alt="phone and laptop"
@@ -212,16 +228,21 @@
         </div>
       </section>
 
-      <!-- team -->
+      <!-- Team -->
 
       <section class="section team">
         <div class="container">
           <h2 class="title">Our Team</h2>
-          <ul class="list">
-            <li class="item">
-              <img class="img" src="./images/mark.jpg" alt="man" width="264" />
+          <ul class="list list-team">
+            <li class="item-team">
+              <img
+                srcset="./images/mark.jpg 1x, ./images/mark@2x.jpg 2x"
+                class="img"
+                src="./images/mark.jpg"
+                alt="man"
+                width="264" />
               <div class="card">
-                <h3 class="second-title">Mark Guerrero</h3>
+                <h3 class="second-title-team">Mark Guerrero</h3>
                 <p class="text">Product Designer</p>
                 <ul class="list team-link">
                   <li>
@@ -255,10 +276,15 @@
                 </ul>
               </div>
             </li>
-            <li class="item">
-              <img class="img" src="./images/tom.jpg" alt="men" width="264" />
+            <li class="item-team">
+              <img
+                srcset="./images/tom.jpg 1x, ./images/tom@2x.jpg 2x"
+                class="img"
+                src="./images/tom.jpg"
+                alt="men"
+                width="264" />
               <div class="card">
-                <h3 class="second-title">Tom Ford</h3>
+                <h3 class="second-title-team">Tom Ford</h3>
                 <p class="text">Frontend Developer</p>
                 <ul class="list team-link">
                   <li>
@@ -292,14 +318,15 @@
                 </ul>
               </div>
             </li>
-            <li class="item">
+            <li class="item-team">
               <img
+              srcset="./images/camila.jpg 1x, ./images/camila@2x.jpg 2x"
                 class="img"
                 src="./images/camila.jpg"
                 alt="woman"
                 width="264" />
               <div class="card">
-                <h3 class="second-title">Camila Garcia</h3>
+                <h3 class="second-title-team">Camila Garcia</h3>
                 <p class="text">Marketing</p>
                 <ul class="list team-link">
                   <li>
@@ -333,14 +360,15 @@
                 </ul>
               </div>
             </li>
-            <li class="item">
+            <li class="item-team">
               <img
+              srcset="./images/daniel.jpg 1x, ./images/daniel@2x.jpg 2x"
                 class="img"
                 src="./images/daniel.jpg"
                 alt="man"
                 width="264" />
               <div class="card">
-                <h3 class="second-title">Daniel Wilson</h3>
+                <h3 class="second-title-team">Daniel Wilson</h3>
                 <p class="text">UI Designer</p>
                 <ul class="list team-link">
                   <li>
@@ -377,11 +405,13 @@
           </ul>
         </div>
       </section>
+
       <!-- Customers -->
+
       <section class="section customers">
         <div class="container">
           <h2 class="title">Customers</h2>
-          <ul class="list">
+          <ul class="list list-customers">
             <li class="item-customers">
               <a class="link link-customers" href="./index.html">
                 <svg class="icon-customers">
@@ -428,7 +458,9 @@
         </div>
       </section>
     </main>
+
     <!-- footer -->
+
     <footer class="footer">
       <div class="container footer">
         <div class="footer-box">
@@ -444,7 +476,7 @@
 
         <div class="footer-box">
           <h3 class="footer-title">Social media</h3>
-          <ul class="list">
+          <ul class="list footer-soc-list">
             <li class="item item-media">
               <a class="social-media" href="">
                 <svg class="icon-footer">
@@ -494,6 +526,73 @@
         </div>
       </div>
     </footer>
+
+    <!-- Backdrop -->
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-btn" data-modal-close>
+          <svg class="icon-btn">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <!-- Modal Form -->
+        <h2 class="form-title">
+          Leave your contacts and we will call you back
+        </h2>
+        <form name="form-order" class="form-order">
+          <label class="order-label" for="name">Name</label>
+          <div class="form-box">
+            <input type="text" name="name" id="name" class="order-input" />
+            <svg class="order-icon">
+              <use href="./images/sprite.svg#icon-user"></use>
+            </svg>
+          </div>
+          <label class="order-label" for="tel">Phone</label>
+          <div class="form-box">
+            <input type="tel" name="tel" id="tel" class="order-input" />
+            <svg class="order-icon">
+              <use href="./images/sprite.svg#icon-phone"></use>
+            </svg>
+          </div>
+          <label class="order-label" for="email">Email</label>
+          <div class="form-box">
+            <input type="email" name="email" id="email" class="order-input" />
+            <svg class="order-icon">
+              <use href="./images/sprite.svg#icon-email"></use>
+            </svg>
+          </div>
+
+          <label class="order-comment" for="comment">Comment</label>
+          <textarea
+            class="comment"
+            name="comment"
+            id="comment"
+            placeholder="Text input"
+            cols=""
+            rows=""></textarea>
+
+          <div class="chekbox">
+            <input
+              class="checkbox-hidden"
+              type="checkbox"
+              name="checkbox"
+              id="checkbox" />
+            <label class="order-label" for="checkbox"
+              ><svg class="checkbox-icon">
+                <use href="./images/sprite.svg#icon-check"></use>
+              </svg>
+              I accept the terms and conditions of the
+              <a class="link-order" href="./index.html"
+                >Privacy Policy</a
+              ></label
+            >
+          </div>
+          <button class="btn-order" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

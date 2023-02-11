@@ -1,0 +1,225 @@
+/* Tablet CSS */
+
+/* Header */
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 736px;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .burger-btn {
+    display: none;
+  }
+
+  .logo {
+    margin-right: 120px;
+  }
+  .nav-header {
+    display: flex;
+  }
+  .list-nav {
+    display: flex;
+    gap: 40px;
+  }
+
+  .link-nav {
+    position: relative;
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    color: var(--logo-color);
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .link-nav:hover,
+  .link-nav:focus {
+    color: var(--text-color);
+  }
+
+  .link-nav:active {
+    color: var(--brand-color);
+  }
+
+  .current {
+    color: var(--btn-color);
+  }
+
+  .current:after {
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+
+    content: " ";
+    background-color: var(--btn-color);
+    width: 100%;
+    height: 4px;
+
+    border-radius: 2px;
+
+    transition: opacity 250ms var(--cubik);
+  }
+
+  .item-auth:not(:last-child) {
+    margin-bottom: 4px;
+  }
+  .link-auth {
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+
+    color: var(--text-color);
+
+    transition: color 250ms var(--cubik);
+  }
+
+  .link-auth:hover,
+  .link-auth:focus {
+    color: var(--brand-color);
+  }
+
+  /* Hero */
+
+  .hero {
+    padding-bottom: 108px;
+  }
+
+  .pic {
+    height: 436px;
+    background-color: var(--logo-color);
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-tablet.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .pic {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-tablet@2x.jpg);
+    }
+  }
+  .hero-title {
+    margin-bottom: 40px;
+
+    color: var(--accent-color);
+
+    font-size: 56px;
+    line-height: 1.07;
+  }
+
+  /* Backdrop and Modal */
+
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 408px;
+    transform: translate(-50%, -50%);
+  }
+  .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scaleY(0);
+  }
+
+  /* Advanteges */
+
+  .second-title {
+    text-align: start;
+  }
+
+  .list-advent {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item-advent {
+    flex-basis: calc((100% - 48px) / 2);
+  }
+
+  .item-advent:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  /* Team */
+
+  .section.team {
+    padding-bottom: 104px;
+  }
+
+  .list-team {
+    margin-left: 108px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 64px;
+  }
+  .item-team {
+    margin: 0;
+  }
+
+  /* Customers */
+
+  .list-customers {
+    column-gap: 24px;
+  }
+  .item-customers {
+    width: 168px;
+  }
+
+  .link-customers {
+    padding: 16px 32px;
+  }
+
+  /* Footer */
+
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-box {
+    align-items: flex-start;
+  }
+
+  .footer-box:first-child {
+    margin-right: 24px;
+  }
+
+  .subscribe {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .subscribe-input {
+    width: 264px;
+  }
+
+  /* Portfolio.html */
+
+  .portfolio-btn-list {
+    justify-content: center;
+    width: auto;
+  }
+  /* Gallery */
+
+  .gallery-cards {
+    width: 736px;
+    grid-column-gap: 24px;
+    grid-row-gap: 72px;
+  }
+}
