@@ -124,17 +124,13 @@
   /* Backdrop and Modal */
 
   .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
     width: 408px;
-    transform: translate(-50%, -50%);
+    padding-left: 24px;
+  padding-right: 24px;
   }
-  .backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scaleY(0);
-  }
+  
 
+  
   /* Advanteges */
 
   .second-title {
@@ -189,7 +185,11 @@
   .footer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: center; */
+  }
+
+  .container.footer{
+    padding-left: 93px;
   }
 
   .footer-box {

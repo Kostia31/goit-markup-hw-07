@@ -171,8 +171,16 @@ body {
   fill: var(--accent-color);
 }
 
+.mobile-wrap-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100%;
+}
+
 .mobile-nav {
-  margin-bottom: 284px;
+  margin-bottom: 75px;
 }
 
 .mobile-link-nav {
@@ -201,7 +209,7 @@ body {
 
 .mobile-link-auth.tel {
   font-weight: 600;
-  font-size: 36px;
+  font-size: 27px;
   line-height: 1.11;
 
   color: var(--text-color);
@@ -232,7 +240,7 @@ body {
 .mobile-social-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 56px;
+  gap: 35px;
 }
 
 .mobile-social {
@@ -351,8 +359,8 @@ body {
   margin: 0 auto;
 
   padding-top: 72px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
   padding-bottom: 24px;
 
   background: var(--accent-color);
@@ -453,7 +461,7 @@ body {
 }
 
 .order-input {
-  width: 360px;
+  width: 285px;
   padding: 8px 16px;
   padding-left: 38px;
 
@@ -485,7 +493,7 @@ body {
 }
 
 .comment {
-  width: 360px;
+  width: 285px;
   height: 120px;
   padding: 8px 16px;
 
@@ -874,7 +882,7 @@ body {
 
 .subscribe-input {
   height: 40px;
-  width: 100vw;
+  width: 90vw;
   padding: 8px 16px;
   background-color: var(--logo-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1090,7 +1098,6 @@ body {
   transform: translateY(0);
 }
 
-/* ./images/gallery-tablet/ */
 /* Mobile CSS */
 
 @media screen and (min-width: 480px) {
@@ -1101,20 +1108,47 @@ body {
   }
 
   .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     width: 392px;
   }
+
+  .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scaleY(0);
+  }
+
   .backdrop {
     padding-left: 18px;
     padding-right: 18px;
+  }
+
+  .mobile-link-auth.tel {
+    font-size: 36px;
   }
 
   .link-customers {
     padding: 16px 40px;
   }
 
+  .mobile-social-list {
+    gap: 56px;
+  }
+
   .subscribe-input {
     width: 396px;
   }
+
+  .order-input {
+    width: 360px;
+  }
+
+  .comment {
+    width: 360px;
+  }
+
   /* Portfolio.html */
 
   .portfolio-btn-list {
