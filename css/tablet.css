@@ -127,11 +127,9 @@
     width: 408px;
     height: 586px;
     padding-left: 24px;
-  padding-right: 24px;
+    padding-right: 24px;
   }
-  
 
-  
   /* Advanteges */
 
   .second-title {
@@ -186,11 +184,7 @@
   .footer {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
-  }
-
-  .container.footer{
-    padding-left: 93px;
+    justify-content: center;
   }
 
   .footer-box {
